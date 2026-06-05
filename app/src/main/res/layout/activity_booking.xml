@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_page">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <ImageView
+                android:id="@+id/btnBackBooking"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@android:drawable/ic_menu_revert"
+                app:tint="@color/blue_dark"
+                android:layout_marginEnd="16dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Data Penyewa"
+                android:textColor="@color/blue_dark"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Nama Lengkap" android:textColor="@color/blue_dark" android:textStyle="bold" android:layout_marginTop="20dp"/>
+        <EditText android:id="@+id/etNamaPenyewa" android:layout_width="match_parent" android:layout_height="50dp" android:background="@drawable/bg_input_field" android:hint="Masukkan nama lengkap" android:paddingHorizontal="16dp" android:layout_marginTop="8dp"/>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Nomor HP / WhatsApp" android:textColor="@color/blue_dark" android:textStyle="bold" android:layout_marginTop="16dp"/>
+        <EditText android:id="@+id/etNoHpPenyewa" android:layout_width="match_parent" android:layout_height="50dp" android:background="@drawable/bg_input_field" android:hint="Contoh: 08123456xxx" android:inputType="phone" android:paddingHorizontal="16dp" android:layout_marginTop="8dp"/>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Email (Opsional)" android:textColor="@color/blue_dark" android:textStyle="bold" android:layout_marginTop="16dp"/>
+        <EditText android:id="@+id/etEmailPenyewa" android:layout_width="match_parent" android:layout_height="50dp" android:background="@drawable/bg_input_field" android:hint="Contoh: nama@email.com" android:inputType="textEmailAddress" android:paddingHorizontal="16dp" android:layout_marginTop="8dp"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Jenis Kelamin" android:textColor="@color/blue_dark" android:textStyle="bold" android:layout_marginTop="16dp"/>
+        <RadioGroup android:id="@+id/rgGender" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="8dp">
+            <RadioButton android:id="@+id/rbLaki" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Laki-laki" android:checked="true"/>
+            <RadioButton android:id="@+id/rbPerempuan" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Perempuan"/>
+        </RadioGroup>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tanggal Masuk" android:textColor="@color/blue_dark" android:textStyle="bold" android:layout_marginTop="16dp"/>
+        <EditText
+            android:id="@+id/etTanggalMasuk"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_input_field"
+            android:hint="Pilih Tanggal Masuk"
+            android:focusable="false"
+            android:clickable="true"
+            android:cursorVisible="false"
+            android:paddingHorizontal="16dp"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Durasi Sewa" android:textColor="@color/blue_dark" android:textStyle="bold" android:layout_marginTop="16dp"/>
+        <RadioGroup android:id="@+id/rgDurasiSewa" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="8dp">
+            <RadioButton android:id="@+id/rb1Bulan" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="1 Bulan" android:checked="true"/>
+            <RadioButton android:id="@+id/rb3Bulan" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="3 Bulan"/>
+            <RadioButton android:id="@+id/rbTahunan" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="1 Tahun"/>
+        </RadioGroup>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Jumlah Penghuni" android:textColor="@color/blue_dark" android:textStyle="bold" android:layout_marginTop="16dp"/>
+        <EditText android:id="@+id/etJumlahPenghuni" android:layout_width="match_parent" android:layout_height="50dp" android:background="@drawable/bg_input_field" android:hint="Contoh: 1" android:inputType="number" android:paddingHorizontal="16dp" android:layout_marginTop="8dp"/>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Catatan Tambahan (Opsional)" android:textColor="@color/blue_dark" android:textStyle="bold" android:layout_marginTop="16dp"/>
+        <EditText android:id="@+id/etCatatan" android:layout_width="match_parent" android:layout_height="80dp" android:background="@drawable/bg_input_field" android:hint="Contoh: Bawa motor, Datang malam" android:gravity="top" android:padding="12dp" android:layout_marginTop="8dp"/>
+
+        <Button
+            android:id="@+id/btnLanjutPembayaran"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="30dp"
+            android:backgroundTint="@color/blue_primary"
+            android:text="Lanjut ke Pembayaran"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:cornerRadius="12dp" />
+
+    </LinearLayout>
+</ScrollView>

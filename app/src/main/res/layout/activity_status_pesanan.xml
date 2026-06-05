@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_page"
+    android:padding="24dp">
+
+    <ImageView
+        android:id="@+id/imgStatusIcon"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="60dp"
+        android:src="@android:drawable/checkbox_on_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/blue_primary" />
+
+    <TextView
+        android:id="@+id/txtStatusTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Transaksi Berhasil!"
+        android:textColor="@color/blue_dark"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgStatusIcon" />
+
+    <LinearLayout
+        android:id="@+id/boxStatusBadge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@color/blue_light"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtStatusTitle">
+        <TextView
+            android:id="@+id/txtStatusBadgeReal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="⏳ MENUNGGU KONFIRMASI"
+            android:textColor="@color/blue_primary"
+            android:textStyle="bold"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/bg_input_field"
+        android:orientation="vertical"
+        android:padding="20dp"
+        app:layout_constraintTop_toBottomOf="@id/boxStatusBadge">
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Nama Penyewa:" android:textColor="@color/gray_text" android:textSize="12sp"/>
+        <TextView android:id="@+id/txtHasilNama" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Budi" android:textColor="@color/blue_dark" android:textStyle="bold" android:textSize="16sp" android:layout_marginBottom="12dp"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Metode Pembayaran:" android:textColor="@color/gray_text" android:textSize="12sp"/>
+        <TextView android:id="@+id/txtHasilMetode" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Transfer Bank" android:textColor="@color/blue_dark" android:textStyle="bold" android:textSize="16sp" android:layout_marginBottom="12dp"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Keterangan Sistem:" android:textColor="@color/gray_text" android:textSize="12sp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Pemilik kos akan memverifikasi bukti transfer dalam waktu maksimal 1x24 jam. Mohon cek berkala." android:textColor="@color/gray_text" android:textSize="14sp"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnLanjutReview"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:backgroundTint="@color/blue_primary"
+        android:text="Beri Ulasan &amp; Selesai"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:cornerRadius="12dp"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
